@@ -2,5 +2,5 @@
     <string name="app_name">StopDeathPopup</string>
 
     <string name="yes_button">YES</string>
-    <string name="question_content">Would you like to stop DEATH?</string>
+    <string name="question_content">Would you like to stop death?</string>
 </resources>

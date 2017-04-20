@@ -12,7 +12,7 @@ public class StopDeathPopup extends AppCompatActivity implements View.OnClickLis
 
     Button yesButton;
     Dialog dialog;
-    Long waitMilliseconds = 5000L;
+    Long waitMilliseconds = 3000L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

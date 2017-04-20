@@ -13,12 +13,14 @@
 
     <TextView
         android:id="@+id/question_content"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/question_content"
         android:layout_marginTop="26dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/yes_button"
