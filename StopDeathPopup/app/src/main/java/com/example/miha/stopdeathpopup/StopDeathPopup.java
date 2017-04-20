@@ -3,10 +3,11 @@ package com.example.miha.stopdeathpopup;
 import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class StopDeathPopup extends AppCompatActivity {
+public class StopDeathPopup extends AppCompatActivity implements View.OnClickListener {
 
     Button yesButton;
     Dialog dialog;
@@ -27,4 +28,8 @@ public class StopDeathPopup extends AppCompatActivity {
         dialog.show();
     }
 
+    @Override
+    public void onClick(View view) {
+        
+    }
 }
