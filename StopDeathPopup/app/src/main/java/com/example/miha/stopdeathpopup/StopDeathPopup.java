@@ -12,13 +12,15 @@ public class StopDeathPopup extends AppCompatActivity implements View.OnClickLis
 
     Button yesButton;
     Dialog dialog;
-    Long waitMilliseconds = 1000L;
+    Long waitMilliseconds = 5000L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        setContentView(R.layout.activity_background_view);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
