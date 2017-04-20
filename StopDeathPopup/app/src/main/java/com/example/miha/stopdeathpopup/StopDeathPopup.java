@@ -2,6 +2,7 @@ package com.example.miha.stopdeathpopup;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ public class StopDeathPopup extends AppCompatActivity implements View.OnClickLis
 
     Button yesButton;
     Dialog dialog;
+    Long waitMilliseconds = 5000L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,23 +24,22 @@ public class StopDeathPopup extends AppCompatActivity implements View.OnClickLis
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        dialog = new Dialog(this);
+
+        dialog.setContentView(R.layout.activity_stop_death_popup);
         yesButton = (Button) dialog.findViewById(R.id.yes_button);
         yesButton.setOnClickListener(this);
 
-        dialog = new Dialog(this);
-        dialog.setContentView(R.layout.activity_stop_death_popup);
         dialog.show();
     }
 
     @Override
     public void onClick(View view) {
+        dialog.dismiss();
 
+        SystemClock.sleep(waitMilliseconds);
+
+        dialog.show();
     }
 
-    private void restartCurrentActivity() {
-        Intent intent = getIntent();
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        finish();
-        startActivity(intent);
-    }
 }
